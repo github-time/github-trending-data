@@ -19,7 +19,7 @@ sinces.forEach((since) => {
 })
 
 fs.writeFileSync('data/languages.json', JSON.stringify({
-  updateTime: dayjs().tz('PRC').format('YYYY-MM-DD hh:mm:ss'),
+  updateTime: dayjs().tz('PRC').format('YYYY-MM-DD HH:mm:ss'),
   data: languages
 }));
 
@@ -58,7 +58,7 @@ async function fetchGithubTrendingHtml(type, language, since, retry = 0) {
           console.log(`\n> gen repositories ${since}/${language} ...`);
           const repositories = parser.repositories(await fetchGithubTrendingHtml('repositories', language, since));
           fs.writeFileSync(`data/repositories/${since}/${language}.json`, JSON.stringify({
-            updateTime: dayjs().tz('PRC').format('YYYY-MM-DD hh:mm:ss'),
+            updateTime: dayjs().tz('PRC').format('YYYY-MM-DD HH:mm:ss'),
             data: repositories
           }))
           console.log(`√ gen repositories ${since}/${language} ok!`);
@@ -71,7 +71,7 @@ async function fetchGithubTrendingHtml(type, language, since, retry = 0) {
           console.log(`\n> gen developers ${since}/${language} ...`);
           const developers = parser.developers(await fetchGithubTrendingHtml('developers', language, since));
           fs.writeFileSync(`data/developers/${since}/${language}.json`, JSON.stringify({
-            updateTime: dayjs().tz('PRC').format('YYYY-MM-DD hh:mm:ss'),
+            updateTime: dayjs().tz('PRC').format('YYYY-MM-DD HH:mm:ss'),
             data: developers
           }))
           console.log(`√ gen developers ${since}/${language} ok!`);
