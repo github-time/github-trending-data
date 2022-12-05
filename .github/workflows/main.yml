@@ -1,0 +1,25 @@
+on:
+  schedule:
+    - cron:  '0 2 * * *'
+  workflow_dispatch:
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: npm
+      - run: npm ci
+      - run: npm run update-trending-data
+      - name: Workspace Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: vaniship
+          author_email: vaniship@gmail.com
+          message: "chore: AUTO GENERATE GITHUB TRENDING DATA."
+          add: "*.json"

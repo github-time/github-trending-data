@@ -1,0 +1,23 @@
+{
+  "name": "github-trending-data",
+  "version": "1.0.0",
+  "scripts": {
+    "update-trending-data": "node scripts/update-trending-data.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github-time/github-trending-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/github-time/github-trending-data/issues"
+  },
+  "homepage": "https://github.com/github-time/github-trending-data#readme",
+  "description": "Auto gen github trending data from https://github.com/trending .",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.12",
+    "dayjs": "^1.11.6"
+  }
+}
