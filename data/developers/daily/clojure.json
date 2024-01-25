@@ -1,1 +1,1 @@
-{"updateTime":"2024-01-25 02:18:42","data":[]}
+{"updateTime":"2024-01-26 02:20:54","data":[{"username":"namenu","name":"Hyunwoo Nam","type":"user","url":"https://github.com/namenu","avatar":"https://avatars.githubusercontent.com/u/243097?s=96&v=4","repo":{"name":"deps-diff","description":"A tool for comparing transitive dependencies in two deps.edn files.","url":"https://github.com/namenu/deps-diff"}}]}
